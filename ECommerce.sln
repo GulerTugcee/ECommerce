@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Web", "ECommerce.Web\ECommerce.Web.csproj", "{A99C072D-A906-4081-9B2D-7593CFF0882A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Core", "ECommerce.Core\ECommerce.Core.csproj", "{2D9D302C-A857-4A11-B342-37A47E57711C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Entities", "ECommerce.Entities\ECommerce.Entities.csproj", "{699F2FC6-C995-4B9E-B9FF-9E8CA887993D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.DataAccess", "ECommerce.DataAccess\ECommerce.DataAccess.csproj", "{D7554E50-0C75-4F13-B3D5-C7B29A2EEB8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Business", "ECommerce.Business\ECommerce.Business.csproj", "{BB32A1A1-C00F-4A5A-8B9C-A6A8CA4E1A29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notlar", "Notlar", "{37DEC686-A2EA-4582-A1DF-046364C9F4E2}"
+	ProjectSection(SolutionItems) = preProject
+		TableModelGenerator.txt = TableModelGenerator.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A99C072D-A906-4081-9B2D-7593CFF0882A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99C072D-A906-4081-9B2D-7593CFF0882A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99C072D-A906-4081-9B2D-7593CFF0882A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99C072D-A906-4081-9B2D-7593CFF0882A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D9D302C-A857-4A11-B342-37A47E57711C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D9D302C-A857-4A11-B342-37A47E57711C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D9D302C-A857-4A11-B342-37A47E57711C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D9D302C-A857-4A11-B342-37A47E57711C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{699F2FC6-C995-4B9E-B9FF-9E8CA887993D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{699F2FC6-C995-4B9E-B9FF-9E8CA887993D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{699F2FC6-C995-4B9E-B9FF-9E8CA887993D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{699F2FC6-C995-4B9E-B9FF-9E8CA887993D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7554E50-0C75-4F13-B3D5-C7B29A2EEB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7554E50-0C75-4F13-B3D5-C7B29A2EEB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7554E50-0C75-4F13-B3D5-C7B29A2EEB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7554E50-0C75-4F13-B3D5-C7B29A2EEB8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB32A1A1-C00F-4A5A-8B9C-A6A8CA4E1A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB32A1A1-C00F-4A5A-8B9C-A6A8CA4E1A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB32A1A1-C00F-4A5A-8B9C-A6A8CA4E1A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB32A1A1-C00F-4A5A-8B9C-A6A8CA4E1A29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C26D850C-83E7-4CC6-A5CC-0BB316BE7354}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿    @model LogoSectionModel
+<div class="section logo-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="logo-bar">
+                    @foreach (var item in Model.BrandData)
+                    {
+                        <div class="logo-bar__item">
+                            <img src="assets/images/logo/@item.Image" alt="" title="" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿  @model SliderShowModel
+<div class="slideshow slideshow-wrapper pb-section sliderFull">
+    <div class="home-slideshow">
+        @foreach (var item in Model.Sliders)
+        {
+        <div class="slide">
+            <div class="blur-up lazyload bg-size">
+                <img class="blur-up lazyload bg-img" data-src="assets/images/slideshow-banners/@item.Image" src="assets/images/slideshow-banners/@item.Image" alt="@item.Header" title="@item.Description" />
+                <div class="slideshow__text-wrap slideshow__overlay classic bottom">
+                    <div class="slideshow__text-content bottom">
+                        <div class="wrap-caption center">
+                            <h2 class="h1 mega-title slideshow__title">@item.Header</h2>
+                            <span class="mega-subtitle slideshow__subtitle">@item.Description</span>
+                           <a href="@item.Link"><span class="btn">Satın Al</span></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+
+
+    </div>
+</div>

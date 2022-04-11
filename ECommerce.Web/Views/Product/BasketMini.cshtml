@@ -1,0 +1,54 @@
+﻿@model BasketModel
+<ul class="mini-products-list">
+    @foreach (var item in Model.BasketProducts)
+    {
+        <li class="item">
+            <a class="product-image" href="#">
+                <img src="/product/@item.Image" alt="@item.product.Name" title="" />
+            </a>
+            <div class="product-details">
+                <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
+                <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
+                <a class="pName" href="cart.html">@item.product.Name.ToUpper()</a>
+                @*  <div class="variant-cart">Black / XL</div>*@
+                <div class="wrapQtyBtn">
+                    <div class="qtyField">
+                        <span class="label">Qty:</span>
+                        <a class="qtyBtn minus" href="javascript:plus(@item.product.Id,-1);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
+                        <input type="text" id="quantity_@item.product.Id" name="quantity" value="@item.Quantity" class="product-form__input qty">
+                        <a class="qtyBtn plus" href="javascript:plus(@item.product.Id,1);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="priceRow">
+                    <div class="product-price">
+                        <span class="money">@item.product.Price.ToString("C")</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    }
+</ul>
+<div class="total">
+    <div class="total-in">
+        <span class="label">Toplam :</span><span class="product-price"><span class="money">@Model.BasketProducts.Sum(x => x.product.Price * x.Quantity).ToString("C")</span></span>
+    </div>
+    <div class="buttonSet text-center">
+        <a href="/checkout" class="btn btn-secondary btn--small">Checkout</a>
+    </div>
+</div>
+
+<script>
+    function plus(productId,quantity)
+    {
+      $.post("/plusproduct",{productId:productId,quantity:quantity},function(data,status){
+                    $("#quantity_"+productId).val(data);
+
+                    });
+
+      $.post("/calculatebasket",{},function(data,status){
+                    $(".money").html(data);
+               
+                    });
+    }
+
+</script>

@@ -1,0 +1,122 @@
+﻿@model CollectionTabSliderModel
+<div class="tab-slider-product section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="section-header text-center">
+                    <h2 class="h2">Yeni Ürünler</h2>
+                    <p>En Yeni Ürünler</p>
+                </div>
+                <div class="tabs-listing">
+                    <ul class="tabs clearfix">
+                        @foreach (var item in Model.Categories)
+                        {
+                            <li class="" rel="tab-@item.Id">@item.Name</li>
+                        }
+
+
+                    </ul>
+                    <div class="tab_container">
+                        @foreach (var item in Model.Categories)
+                        {
+                            <div id="tab-@item.Id" class="tab_content grid-products">
+                                <div class="productSlider">
+                                    @foreach (var item2 in Model.Products.Where(x => x.Key == item.Id))
+                                    {
+                                        @foreach (var product in item2.Value)
+                                        {
+
+                                            <div class="col-12 item">
+
+                                                <div class="product-image">
+
+                                                    <a href="/urun/@product.SeoName">
+                                                        @{
+                                                            int i = 0;
+                                                        }
+                                                        @foreach (var imagesItem in Model.ProductImages.Where(x => x.Key == product.Id).FirstOrDefault().Value)
+                                                        {
+                                                            if (i == 0)
+                                                            {
+                                                                <img class="primary blur-up lazyload" data-src="/product/@imagesItem.Name" src="/product/@imagesItem.Name" alt="image" title="product">
+                                                                i++;
+                                                            }
+                                                            else
+                                                            {
+                                                                <img class="hover blur-up lazyload" data-src="/product/@imagesItem.Name" src="/product/@imagesItem.Name" alt="image" title="product">
+                                                            }
+
+                                                        }
+
+
+
+
+
+
+
+
+                                                    </a>
+
+
+
+
+
+
+
+                                                    @* <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">*@
+                                                    <button class="btn btn-addto-cart" type="button" onclick="AddBasketHomePage(1,@product.Id)" tabindex="0">Sepete Ekle</button>
+                                                    @* </form>*@
+                                                    <div class="button-set">
+                                                        <a href="javascript:void(0)" title="Quick View" class="quick-view-popup quick-view" data-toggle="modal" data-target="#content_quickview">
+                                                            <i class="icon anm anm-search-plus-r"></i>
+                                                        </a>
+                                                        <div class="wishlist-btn">
+                                                            <a class="wishlist add-to-wishlist" href="wishlist.html">
+                                                                <i class="icon anm anm-heart-l"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="compare-btn">
+                                                            <a class="compare add-to-compare" href="compare.html" title="Add to Compare">
+                                                                <i class="icon anm anm-random-r"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+
+                                                <div class="product-details text-center">
+
+                                                    <div class="product-name">
+                                                        <a href="short-description.html">@product.Name.ToUpper()</a>
+                                                    </div>
+
+
+                                                    <div class="product-price">
+
+                                                        <span class="price" id="">@product.Price.ToString("C")</span>
+                                                    </div>
+
+
+
+
+
+                                                </div>
+
+                                            </div>
+                                        }
+
+                                    }
+
+
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

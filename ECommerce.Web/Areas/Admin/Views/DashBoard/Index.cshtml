@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @await Component.InvokeAsync("Header")
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        @await Component.InvokeAsync("Preloader")
+        <!-- Navbar -->
+          @await Component.InvokeAsync("Navbar")
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+       @await Component.InvokeAsync("MainSidebar")
+
+        <!-- Content Wrapper. Contains page content -->
+        @await Component.InvokeAsync("ContentWrapperContainsPageContent")
+        <!-- /.content-wrapper -->
+        @await Component.InvokeAsync("ContentWrapper")
+
+        <!-- Control Sidebar -->
+        @await Component.InvokeAsync("ControlSidebar")
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    @await Component.InvokeAsync("Footer")
+</body>
+</html>
